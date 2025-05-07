@@ -1,3 +1,6 @@
+
+// Time Complexity: O(log k)
+
 int bigmod(long long n, long long k) {
   int ans = 1 % mod; n %= mod; if (n < 0) n += mod;
   while (k) {

@@ -1,16 +1,23 @@
 
+// Time Complexity: 
+
+// make(x)	O(1)
+// find(x)	Amortized O(α(n)) (α = inverse Ackermann)
+// merge(x, y)	Amortized O(α(n))
+
+// α(n) is nearly constant, even for huge n (~10^9).
+
+
+
 class dsu
 {
     public: 
 
     vector<ll> parent,size;
-    dsu(ll x){
-        parent.resize(x+2);
-        size.resize(x+2);
-    }
-    void make(ll x){
-        parent[x] = x;
-        size[x] = 1;
+    dsu(ll n){
+        parent.resize(n+2);
+        size.resize(n+2,1);
+        for(ll i = 1 ; i <= n ; i++)parent[i] = i;
     }
 
     ll find(ll x){

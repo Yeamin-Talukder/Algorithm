@@ -1,4 +1,11 @@
 
+
+// Time Complexcity : 
+// create	O(n)
+// update	O(log n)
+// query	O(log n)
+
+
 class segment_tree
 {
 
@@ -62,9 +69,9 @@ query((node*2)+1,mid+1,end,l,r,carry+lazy[node],ans);
 // create an object  of segment_tree like
 // -> "segment_tree* segment = new segment_tree(n);" 
 // -> "segment_tree segment(n);"  
-//---- first one for pointer type and second one is normal way and n use for vector size declared
+//---- first one for pointer type and second one is normal way and n use for vector size declaration
 
-// -- declare create methode of the segment_tree first before use
+// -- declare create method of the segment_tree first before use
 // use node value 1 everywhere
 // use 0 based index 
 // use a ans variable for geting query ans in it

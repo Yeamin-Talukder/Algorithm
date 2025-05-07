@@ -1,3 +1,8 @@
+
+
+// Time Complexity: O(n^2)
+
+
 class pascal_triangle
 {
     public:

@@ -1,43 +1,43 @@
 
-// single source shortest path algo with positive weights
+
+// Time complexity : O( (n + m) * log n)
+
+
+// Single-source shortest path algorithm with positive weights using priority queue
 class Dijkstra
 {
+public:
 
-public : 
+    vector<ll> dis;
+    priority_queue<pair<ll, ll>, vector<pair<ll, ll>>, greater<pair<ll, ll>>> pq;
 
-vector<ll> vis,dis;
-set<pair<ll,ll>> srt_path;
-Dijkstra(ll n , ll root ,vector<vector<pair<ll,ll>>> &adj)
-{
-    vis.resize(n+1,0);
-    dis.resize(n+1,LLONG_MAX);
-    srt_path.insert({0,root});
-    dis[root] = 0;
-
-    while (srt_path.size() != 0)
+    Dijkstra(ll n, ll root, vector<vector<pair<ll, ll>>> &adj)
     {
-        ll node = srt_path.begin()->second;
-        ll distance = srt_path.begin()->first;
+        dis.resize(n + 1, LLONG_MAX);
+        pq.push({0, root});
+        dis[root] = 0;
 
-        srt_path.erase(srt_path.begin());
-        
-        if(vis[node] == 1) continue;
-        vis[node] = 1;
-
-        for(auto u:adj[node])
+        while (!pq.empty())
         {
-            if( distance + u.first <  dis[u.second]  )
+            ll node = pq.top().second;
+            ll distance = pq.top().first;
+
+            pq.pop();
+
+            if (distance > dis[node]) continue;
+
+            for (auto u : adj[node])
             {
-                dis[u.second] = distance + u.first;
-                srt_path.insert({dis[u.second],u.second});
+                if (distance + u.first < dis[u.second])
+                {
+                    dis[u.second] = distance + u.first;
+                    pq.push({dis[u.second], u.second});
+                }
             }
         }
-
     }
-    
-}
-
 };
+
 
 // Just give the value of constructor 
 //and it will give you the shortest path from root to all the nodes
