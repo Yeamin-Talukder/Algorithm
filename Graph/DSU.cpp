@@ -17,7 +17,7 @@ class dsu
     dsu(ll n){
         parent.resize(n+2);
         size.resize(n+2,1);
-        for(ll i = 1 ; i <= n ; i++)parent[i] = i;
+        for(ll i = 1 ; i <= n ; i++) parent[i] = i;
     }
 
     ll find(ll x){
