@@ -1,3 +1,10 @@
+
+
+
+// Time complexity : O(V+E)
+// Space complexity : O(V+E)
+
+
 class Topological_DFS
 {
     public :
