@@ -4,6 +4,10 @@
 // Iterative Approach : O(2^n * n)  || Space Complexity : O(1)
 
 
+// This Found the number of values that are divisible by any of the numbers in the array from (0 - n)
+// Give The LCM value to 1 and index = 0 , size =  0 when calling the function
+
+
 // Recursive Approach ( very Fast Because of pruning method)
 void Inclusion_Exclusion(ll n , vector<ll> &v , ll index ,ll size , ll lcm , ll &ans)
 {
