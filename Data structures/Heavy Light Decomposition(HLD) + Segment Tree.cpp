@@ -71,6 +71,8 @@ query((node*2)+1,mid+1,end,l,r,carry+lazy[node],ans);
 
 
 
+
+// Here edge is the tree edge and value is the value for each node in tree
 class HLD
 {
     public:
