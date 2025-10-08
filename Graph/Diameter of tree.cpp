@@ -16,7 +16,7 @@ class Diameter
     Diameter(ll n , vector<vector<pair<ll,ll>>> &adj)
     {
         save.resize(n+1);
-        dfs(0,-1,adj);
+        dfs(0,-1,adj); // 0 is the root node (change it if needed else it will not work)
     }
 
 ll dfs(ll node, ll parent, vector<vector<pair<ll,ll>>> &adj)
