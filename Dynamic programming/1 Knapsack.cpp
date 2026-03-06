@@ -1,9 +1,6 @@
-
-
 // 2D dp solution of 0/1 Knapsack.
 // Time Complexcity : O(n*w)
 // Space Complexcity : O(n*w)
-
 
 vector<vector<ll>> dp; // declare the size of dp vector
 ll Knapsack (ll  index , ll left_w , vector<pair<ll,ll>> &v)
@@ -16,7 +13,6 @@ ll Knapsack (ll  index , ll left_w , vector<pair<ll,ll>> &v)
 
     return dp[index][left_w] =  ans;
 }
-
 
 
 

@@ -7,7 +7,8 @@
 
 // α(n) is nearly constant, even for huge n (~10^9).
 
-
+// If you need group size use the size vector not the parent
+// If you need to use parent vector then first call the dsu.find() funtion this will set the letest parent data
 
 class dsu
 {
